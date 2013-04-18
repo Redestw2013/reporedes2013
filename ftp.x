@@ -1,13 +1,10 @@
-
-
-/*Estructura para la identificacion del usuario que puede dar de baja el servidor remotamente */
 struct id_usr{
-	string nombre;
-	string pass;
-	string ip;
+	string nombre <250>;
+	string pass <250>;
+	string ip <250>;
 
 };
-/* Estructura para paso de datos de cliente al servidor. */
+
 struct datos_archivo{
 	string nombre <250>;
 	string tamanio <250>;
@@ -16,7 +13,6 @@ struct datos_archivo{
 
 program REMOTEFILEPROGARM{
 	version REMOTEFILEVERS{
-		
 		int end(id_usr)=1;
 		int get(datos_archivo)=2;/* retonarmos >0 si ok, sino retonamos -1.(file not found) */
 		int put(datos_archivo)=3;/* retonarmos >0 si ok, sino retonamos -1.(file not found) */
