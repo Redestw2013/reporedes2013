@@ -1,3 +1,4 @@
+/* Estructura utilizada para la identificacion del usuario*/
 struct id_usr{
 	string nombre <250>;
 	string pass <250>;
@@ -5,6 +6,7 @@ struct id_usr{
 
 };
 
+/* EStructura utilizada para el paso de strings (cadenas de archivos y paths) entre servidor y cliente*/
 struct datos_archivo{
 	string nombre <250>;
 	string tamanio <250>;
